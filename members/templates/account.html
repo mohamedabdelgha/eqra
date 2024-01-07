@@ -1,0 +1,54 @@
+{% extends "master.html" %}
+
+{% block title %}
+    اقرأ / حسابى
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/account.css">
+
+
+<body bgcolor="#292929">
+    <header>
+        <a href="/"><i class="fa-regular fa-circle-left"></i></a>
+        <h1>اقرأ</h1>
+    </header>
+    <center>
+    <section class="account-border">
+        <div class="account-pic">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="account-info">
+          <h2 id="name">{{ Name }}</h2><br>
+          <h3 id="email">{{ email }}</h3>
+        </div>
+    </section>
+    </center>
+    <h2> الكتب الخاصة بى</h2>
+    <section class="pagecontent container">
+
+    {% if books %}
+        {% for book in books %}
+            <div class="bookcard" onclick= "location.href = '/book?book={{ book.pk }}' ">
+                <img src="{{ book.link_photo }}" alt="">
+                <p>{{ book.name }} - {{ book.writer }}</p>
+                <p></p>
+                <p>
+                    {{ book.brief }}
+                </p>
+                <div class="price">
+                    <span>تابع القراءة</span>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h2>
+            <a href="/">انتقل الي الصفحة الرئيسية </a>
+        </h2>
+        <h2>
+            انت لم تقرأ كتب بعد .. هل تريد أن تقرأ كتب ؟
+        </h2>
+    {% endif %}
+
+    </section>
+{% endblock %}

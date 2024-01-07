@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.nav {
+    background-color: #1b1b1b;
+    height: 70px;
+    display: flex;
+}
+
+.nav p {
+    /* font-family: 'Alkalami', serif  !important; */
+    display: block;
+    color: #ffa31a;
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: calc(50% - 50px);
+    margin-top: 2px;
+}
+
+.nav a {
+    color: #ffa31a;
+    font-size: 2em;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 0.7s ease;
+}
+.nav a:hover{
+    color: white;
+}
+.login {
+    background-color: #292929;
+    height: calc(100vh - 70px);
+    position: relative;
+}
+
+.loginbody {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 65%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.left{
+    margin-left: 40px;
+}
+.left label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #1b1b1bcc;
+    font-size: 1.3em;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.left input {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-color: #1b1b1bcc;
+    color: #1b1b1b;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.3em;
+}
+
+.left button {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffa31a;
+    color: white;
+    transition: 0.7s ease;
+    cursor: pointer;
+    font-size: 1.4em;
+    padding: 5px 130px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.left button:hover{
+    background-color: #292929;
+    transform: scale(1.1);
+}
+.left span{
+    font-size: 1.1em;
+    font-family: 'Tajawal', sans-serif; 
+    color: #1b1b1b;  
+}
+.left span a {
+    text-decoration: none;
+    color: #ffa31a;
+    transition: 0.7s ease;
+    font-size: 1.2em;
+
+}
+.left span a:hover{
+    color: #1b1b1b;
+}
+.right{
+    margin-left: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
+    padding: 5px 10px;
+}
+footer h2{
+    color: #ffa31a;
+    font-size: 1.4em;
+    font-family: 'Tajawal', sans-serif;
+}

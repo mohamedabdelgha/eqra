@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    background-color: #1b1b1b;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 999;
+    padding-top:20px;
+}
+header h1{
+    color: #ffa31a;
+    font-size: 3em;
+    font-family: 'Reem Kufi', sans-serif;
+    margin-left: 80px;
+    margin-top: -20px;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffa31a;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-right: 60px;
+    border-radius: 10px;
+    transition:0.7s ease ;
+    font-family: 'Tajawal', sans-serif;
+}
+header a:hover{
+    transform: scale(1.1);
+    color: #ffa31a;
+    background-color: #fff;
+}
+.landscape{
+    background: url("../pics/landscape.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 47vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 00px;
+}
+.landscape p{
+    font-family: 'Cairo', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 45%;
+    text-align: center;
+}
+.search{
+    border: none;
+    width: max-content;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #fff;
+}
+.search button{
+    border: none;
+    background-color: #fff;
+    padding: 17px 40px;
+    color: #292929;
+    transition: 0.7s ease;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.search button:hover{
+    background-color: #292929;
+    color: #fff;
+    box-shadow: 1px 1px 10px #292929;
+}
+.search input{
+    border:none;
+    padding: 10.5px 60px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #292929;
+    font-family: 'Cairo', sans-serif;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    color: #ffa31a;
+    font-family: 'Cairo', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    margin: 20px 11px;
+}
+.filter input{
+    padding: 5px 10px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Cairo', sans-serif;
+    color:#292929;
+}
+#type{
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #292929;
+    border: none;
+    border-radius: 10px;
+    margin-right: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Cairo', sans-serif;
+}
+#filter-submit{
+    padding: 0px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: 'Tajawal', sans-serif;
+    color: #ffa31a;
+    background-color: #fff;
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+#filter-submit:hover{
+    transform: scale(1.1);
+    color: #fff;
+    background-color: #ffa31a;
+}
+
+/* start body */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px 0px;
+    border-top:1px solid #ffa31a;
+    border-bottom:1px solid #ffa31a;
+}
+/* End Body */
+
+/* start Bookcontent  */
+
+.bookcard {
+    width: calc((1500px/5));
+    height: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .5s 0s all;
+    margin-right: 30px;
+    margin-top: 10px;
+    border: 0.5px solid #ffa31a;
+}
+
+.bookcard:hover {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 20px 25px -5px, rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
+    transform: scale(1.04);
+    border: 1px solid #fff;
+}
+
+.bookcard img {
+    width: 100%;
+    height: 50%;
+}
+
+.bookcard:hover img {
+    background-color: black;
+}
+
+.bookcard p:first-of-type {
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffa31a;
+    text-align: center;
+    margin-top: 5px;
+    max-height: 55px;
+    min-height: 50px;
+    overflow: hidden;
+    font-family: 'Cairo', sans-serif;
+    padding: 0px 3px;
+}
+
+.bookcard p:nth-of-type(2) {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    margin: 15px auto 15px auto;
+    font-family: 'Cairo', sans-serif;
+}
+
+.bookcard p:nth-of-type(3) {
+    font-size: 14px;
+    color: #ffb443be;
+    padding: 0 10px;
+    font-weight: 800;
+    max-height: 100px;
+    min-height: 90px;
+    overflow: hidden;
+    line-height: 1.5;
+    font-family: 'Cairo', sans-serif;
+}
+
+.bookcard .price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    max-height: 50px;
+    min-height: 50px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.bookcard .price span {
+    color: #ffa31a;
+    background-color: #F2F2F2;
+    width: 35%;
+    text-align: center;
+    line-height: 3;
+}
+
+/* End Bookcontent  */
+
+.space {
+    background-color:#fff;
+    width: 50%;
+    box-shadow: 0px 1px 5px #fff ;
+    text-align: center;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+    transition: 0.7s ease;
+    margin-top: 40px;
+}
+.space:hover{
+    transform: scale(1.1);
+}
+.space p{
+    color: #ffa31a;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400px;
+    padding-bottom: 15px;
+}
+.space a{
+    color: #ffa31a;
+    padding: 10px;
+    font-size: 1.5em;
+    margin: 10px;
+}
+.space a:hover{
+    color: #292929;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
+    width: 100%;
+    z-index: 999;
+    padding: 5px 10px;
+}
+footer h2{
+    color:#ffa31a ;
+    font-size: 1.2em;
+      font-family: 'Rubik', sans-serif;
+}

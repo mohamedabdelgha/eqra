@@ -1,0 +1,55 @@
+{% extends "master.html" %}
+
+{% block title %}
+    اقرأ / تسجيل دخول
+{% endblock %}
+ 
+{% block content %}
+<link rel="stylesheet" href="../static/css/login.css">
+<div class="nav">
+    <a href="/main"><i class="fa-regular fa-circle-left"></i></a>
+    <p>اقرأ</p>
+</div>
+<div class="login">
+    <div class="loginbody">
+        <div class="left">
+ 
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="loginemail">
+                        {% if messages %}
+                            <ul>
+                                {% for message in messages %}
+                                <h2 style="color: red;font-size: large;">
+                                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                                    {{ message }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        
+                    <label>E-mail</label>
+                    <input type="email" name ='email' required placeholder="Name@domain.com" required>
+                </div>
+                <div class="loginpassword">
+                    <label>Password</label>
+                    <input type="password" name = 'password' required placeholder="Please Enter Your Password" required>
+                </div>
+                <button type="submit">login</button><br>
+                <span>Don't have an account yet? <a href="/register">Sign Up</a> </span>
+            </form>
+
+
+            
+        </div>
+        <div class="right">
+            <img src="../static/pics/Mobile login.gif" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

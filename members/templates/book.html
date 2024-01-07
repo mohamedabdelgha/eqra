@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}
+    الكتاب
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="../static/css/book.css">
+<body bgcolor="#292929">
+    <header>
+        <a href="/"><i class="fa-regular fa-circle-left"></i></a>
+        <h1> اقرأ</h1>
+    </header>
+    <center>
+    <section class="contianer">
+        <div class="discription">
+          <h2 id="book-name">{{ book.name }}</h2><br>
+          <h3> اسم المؤلف: <span id="author-name">{{ book.writer }}</span></h3>
+          <h3>سنة النشر: <span id="date">{{ book.date }}</span></h3>
+          <h3>التصنيف: <span id="category">{{ book.category }}</span></h3>
+          <h3> عدد الصفحات: <span id="page-no">{{ book.number_of_pages }}</span></h3>
+          <p id="book-discription"> {{ book.brief }} </p>
+          <a href="{{ book.link_download }}" >تحميل الان</a>
+        </div>
+        <div class="book">
+           <img src="{{ book.link_photo }}" alt="book cover">
+        </div>
+    </section>
+    </center>
+
+{% endblock %}

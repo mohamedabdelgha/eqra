@@ -1,0 +1,51 @@
+{% extends "master.html" %}
+
+{% block title %}
+    اقرأ / انشاء حساب جديد
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/signup.css">
+
+<header>
+    <a href="/main"><i class="fa-regular fa-circle-left"></i></a>
+    <h1>اقرأ</h1>
+</header>
+
+<center>
+    <form method="post">
+        {% csrf_token %}
+        
+        <section class="signup">
+            <div class="input">
+
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <h2 style="color: red;font-size: large;">
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
+            <h2>Name</h2>
+            <input type="text" name ="name" placeholder="please enter your name" required><br>
+            <h2>E-mail</h2>
+            <input type="email" name = "email" placeholder="name@domain.com" required><br>
+            <h2>Password</h2>
+            <input type="password" name = "password1" placeholder=" please enter your password" required><br>
+            <h2>Confirm</h2>
+            <input type="password" name = "password2" placeholder="please confirm your password" required><br>
+            <button>sign up</button><br><br>
+            <a href="/login">Already Have An E-mail</a>
+            </div>
+            <img src="../static/pics/Sign up.gif" alt="">
+        </section>
+    </form>
+
+</center>
+{% endblock %}
+
+

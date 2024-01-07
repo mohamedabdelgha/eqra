@@ -1,0 +1,105 @@
+{% extends "master.html" %}
+
+{% block title %}
+    اقرأ
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/home.css">
+
+<body bgcolor="#292929">
+    <!-- Starting Header -->
+    <header>
+        <h1>اقرأ</h1>
+        <div class="nav">
+            {% if not Name %}
+                <a href="/register">Sign Up</a>
+                <a href="/login">Login</a>
+            {% else %}
+                <select id="type" name="forma" onchange="location = this.value;"> 
+                    <option value="">{{ Name }}</option>
+                    <option value="/myaccount">My Account</option>
+                    <option value="/logout">Log out</option>
+                </select>
+            {% endif %} 
+            <a href="#space">Contact Us</a>
+        </div>
+        
+    </header>
+
+    <!-- Starting Landscape & filter -->
+    <form method="post" id="task-form">
+        {% csrf_token %}
+        <section class="landscape">
+            <p>لا ينمو الجسد إلا بالطعام والرياضة، ولا ينمو العقل إلا بالمطالعة والتفكير والقراءة</p><br>
+            <div class="search">
+                <input type="search" name ="name" id="text" placeholder="ابحث عن كتاب">
+                <button type="submit" class="btn" id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>        
+        </section>
+    </form>
+    <form method="post" id="task-form">
+        {% csrf_token %}
+        <section class="filter">
+            <input type="search" name ="author" id="author" placeholder="كتب المؤلف">
+            <button type="submit" id="filter-submit">filter</button>
+        </section>
+    </form>
+
+    <!-- Show Books -->
+    <h2>  كتب مقترحة </h2>
+    <section class="pagecontent container">
+        {% if books %}
+            {% for book in books %}
+                    <div class="bookcard" onclick= "location.href='/book?book={{ book.pk }}'">
+                            <img src="{{ book.link_photo }}" alt="">
+                            <p>{{ book.name }} - {{ book.writer }}</p>
+                            <p></p>
+                            <p>
+                                {{ book.brief }}
+                            </p>
+                            <div class="price">
+                                <span> معرفة المزيد </span>
+                            </div>
+                    </div>
+            {% endfor %}
+        {% else %}
+            <h2>
+                لا يوجد هذا الكتاب حتي الان .. حاول البحث عن كتاب اخر.
+            </h2>
+        {% endif %}
+    </section>
+
+
+<section class="pagecontent container">
+    <span>
+        {% if books.has_previous %}
+            <a style="padding: 8px 16px;text-decoration: none;" id="filter-submit" href="?page={{ books.previous_page_number }}">prev</a>
+        {% endif %}
+        
+        <span style="padding: 8px 16px;text-decoration: none;font-size:20px;color: #ffa31a;">
+            {% if books.number %} 
+                Page {{ books.number }} of {{ books.paginator.num_pages }} 
+            {% endif %}
+        </span>
+
+        {% if books.has_next %}
+            <a style="padding: 8px 16px;text-decoration: none;" id="filter-submit" href="?page={{ books.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</section>
+
+
+    <!-- Starting Footer -->
+    <footer>
+        <div class="space" id="space">
+            <p>you can Contact us from:</p>
+           <a href="https://www.instagram.com/" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+           <a href="" target="_blank"><i class="fa-solid fa-phone"></i></a>
+        </div>
+    </footer>
+
+{% endblock %}

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    background-color: #1b1b1b;
+    justify-content: left;
+    width: 100%;
+    z-index: 999;
+    padding: 0px 10px;
+}
+header h1{
+    color: #ffa31a;
+    font-size: 3em;
+    font-family: 'Reem Kufi', sans-serif;
+    margin-left: 600px;
+}
+header a{
+    text-decoration: none;
+    color: #ffa31a;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition:0.7s ease ;
+}
+header a:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
+.account-border{
+    width: 100%;
+    height: 14em;
+    display: flex;
+    justify-content: left;
+}
+.account-pic{
+    margin: 50px 40px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffa31a;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.account-pic i{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    font-size: 4.7em;
+    color: #fff;
+}
+.account-info{
+    margin: 40px 0px;
+    text-align: left;
+}
+.account-info h2{
+    font-size: 2em;
+    font-family: 'Tajawal', sans-serif;
+    color: #fff;
+}
+.account-info h3{
+    margin-top: -30px;
+    font-size: 1.3em;
+    font-family: 'Tajawal', sans-serif;
+    color:#ffa31a;    
+}
+/* start body */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px 0px;
+    border-top:1px solid #ffa31a;
+    border-bottom:1px solid #ffa31a;
+}
+/* End Body */
+
+/* start Bookcontent  */
+
+.bookcard {
+    width: calc((1500px/5));
+    height: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .5s 0s all;
+    margin-right: 30px;
+    margin-top: 10px;
+    border: 0.5px solid #ffa31a;
+}
+
+.bookcard:hover {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 20px 25px -5px, rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
+    transform: scale(1.04);
+    border: 1px solid #fff;
+}
+
+.bookcard img {
+    width: 100%;
+    height: 50%;
+}
+
+.bookcard:hover img {
+    background-color: black;
+}
+
+.bookcard p:first-of-type {
+    font-size: 19px;
+    font-weight: 500;
+    color: #ffa31a;
+    text-align: center;
+    margin-top: 5px;
+    max-height: 55px;
+    min-height: 50px;
+    overflow: hidden;
+    font-family: 'Cairo', sans-serif;
+    padding: 0px 3px;
+}
+
+.bookcard p:nth-of-type(2) {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    margin: 15px auto 15px auto;
+    font-family: 'Cairo', sans-serif;
+}
+
+.bookcard p:nth-of-type(3) {
+    font-size: 14px;
+    color: #ffb443be;
+    padding: 0 10px;
+    font-weight: 800;
+    max-height: 100px;
+    min-height: 90px;
+    overflow: hidden;
+    line-height: 1.5;
+    font-family: 'Cairo', sans-serif;
+}
+
+.bookcard .price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    max-height: 50px;
+    min-height: 50px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.bookcard .price span {
+    color: #ffa31a;
+    background-color: #F2F2F2;
+    width: 35%;
+    text-align: center;
+    line-height: 3;
+}
+
+/* End Bookcontent  */
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    color: #ffa31a;
+    font-family: 'Cairo', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
+    width: 100%;
+    z-index: 999;
+    margin-top: 40px;
+    padding: 5px 10px;
+}
+footer h2{
+    color:#ffa31a ;
+    font-size: 1.2em;
+      font-family: 'Rubik', sans-serif;
+}

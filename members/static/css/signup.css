@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica+SC&family=IM+Fell+Double+Pica&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    background-color: #1b1b1b;
+    justify-content: left;
+    width: 100%;
+    z-index: 999;
+    padding: 0px 10px;
+}
+header h1{
+    color: #ffa31a;
+    font-size: 3em;
+    font-family: 'Reem Kufi', sans-serif;
+    margin-left: 600px;
+}
+header a{
+    text-decoration: none;
+    color: #ffa31a;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition:0.7s ease ;
+}
+header a:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
+.signup{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    margin: 30px;
+    width: 70%;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #fff;
+}
+.input{
+    padding: 50px 40px;
+}
+h2{
+    color: #1b1b1bcc;
+    font-size: 1.3em;
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-family: 'Tajawal', sans-serif;
+
+}
+input{
+    height: 50px;
+    width: 300px;
+    text-align:unset;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1.2em;
+    border-color: #292929b7;
+    color: #292929de;
+    font-family: 'Rubik', sans-serif;
+}
+button{
+    padding: 5px 30px;
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #fff;
+    background-color: #ffa31a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.8s ease;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: #292929;
+}
+.input a{
+  text-decoration: none;
+  color: #ffa31a;
+  font-size: 1.15em;
+  font-family: 'Rubik', sans-serif;
+  transition: 0.7s ease;
+}
+.input a:hover{
+    color: #292929;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 999;
+    padding: 5px 10px;
+}
+footer h2{
+    color:#ffa31a ;
+    font-size: 1.2em;
+      font-family: 'Rubik', sans-serif;
+}
